@@ -6,9 +6,10 @@ slide-base
         img(src="../images/photo.jpg")
       .intro
         small.title oRo コミュニケーションデザイン事業部 エンジニア
-        strong.name 諏訪 重貴 / Shigeki Suwa
+        h2 諏訪 重貴 / Shigeki Suwa
         div: small 24歳 (1995年 早生まれ)
         div: small 芝浦工業大学大学院 卒業見込 (修士課程)
+        link-list(:links="links")
     hr
     div
       p FLASH、Java Applet、ブラウザゲー、隠しページ・・・などが跋扈していた2000年代初頭にインターネットの世界に爆誕。 早々にHTML・CSSと出会い、今の今まで続く腐れ縁である。
@@ -18,18 +19,7 @@ slide-base
         | 』 として楽曲制作とアルバムCDの企画・制作進行をしている。
       p その傍ら、こつこつと積み重ねていたWebサイト制作の経験を活かし、インターン・アルバイトとして複数のWebサービス開発に携わってきた。
       p 本当に使いやすいWebサイトを作るのがどうやら好きみたいだ。
-      p.alignright: small (2018/06/03)
-    hr
-    dl
-      dt ポートフォリオ
-      dd
-        a(href="https://ztrehagem.github.io/", target="_blank") https://ztrehagem.github.io/
-      dt Twitter
-      dd
-        a(href="https://twitter.com/ztrehagem", target="_blank") https://twitter.com/ztrehagem
-      dt GitHub
-      dd
-        a(href="https://github.com/ztrehagem", target="_blank") https://github.com/ztrehagem
+      p._alignright: small (2018/06/03)
 </template>
 
 <style lang="stylus">
@@ -38,7 +28,7 @@ slide-base
 .center-slide
   .row
     display flex
-    align-items center
+    align-items flex-start
 
     +mobile()
       display block
@@ -59,26 +49,30 @@ slide-base
       margin 0
       margin-top 2rem
 
-  .name
-    font-size 1.5em
-    display block
-    margin 1rem 0
-    line-height 1
-
   .title
     color $cl-gray
     display block
-
-  .alignright
-    text-align right
+    margin-bottom 1rem
 </style>
 
 <script lang="ts">
 import Vue from 'vue'
 import SlideBase from './slide-base.vue';
+import LinkList from './link-list.vue';
 export default Vue.extend({
   components: {
     SlideBase,
+    LinkList,
+  },
+  data() {
+    return {
+      links: [
+        { title: 'Portfolio Site', href: 'https://ztrehagem.github.io/' },
+        { title: 'Twitter', href: 'https://twitter.com/ztrehagem' },
+        { title: 'GitHub', href: 'https://github.com/ztrehagem' },
+        { title: 'このページのソースコード', href: 'https://github.com/ztrehagem/oro-cd-study' },
+      ],
+    };
   },
 })
 </script>
