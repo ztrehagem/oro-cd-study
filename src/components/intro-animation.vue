@@ -87,6 +87,7 @@ $easeInExpo = cubic-bezier(0.95, 0.05, 0.795, 0.035)
     pointer-events none
     transition .5s
     transition-property opacity, visibility
+    width 0
 
     &._active
       opacity 0
