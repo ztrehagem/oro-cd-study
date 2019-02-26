@@ -1,3 +1,20 @@
+@require "include"
+@require "reset"
+
+html
+  background-color $cl-light
+
 body
-  margin 0
-  padding 0
+  color $cl-dark
+
+hr
+  margin 2rem 0
+
+button
+  &:disabled
+    color $cl-gray
+
+.material-icons
+  display inline-flex
+  align-items center
+  font-size 1em
