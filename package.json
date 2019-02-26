@@ -8,6 +8,7 @@
     "build": "npm run clean && parcel build --public-url . --no-source-maps src/index.pug",
     "clean": "rm -r dist || true",
     "clean:cache": "rm -r .cache || true",
+    "release": "git subtree push --prefix dist origin master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
