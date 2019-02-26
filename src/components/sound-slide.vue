@@ -15,7 +15,7 @@ slide-base
       li.product
         a(href="https://elmina.net/products/elmn0004/", target="_blank"): strong Melodious Planet
       li.product
-        a(href="http://info.kamomesano.info/tatsuta2/", target="_blank"): strong tatsuta2 compilation 2
+        a(href="http://info.kamomesano.info/tatsuta2/", target="_blank"): strong tatsuta compilation 2
     p etc...
 </template>
 
